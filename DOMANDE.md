@@ -23,33 +23,33 @@ KAPTOXA è anche chiamato BlackPOS o reedum.
 
 ### 3.
 - Cos'è l'incapsulamento? In cosa consiste?  
- - Cosa succede dopo al dataframe?
+  - Cosa succede dopo al dataframe?
 
 - Qual è la differenza tra la pila ISO/OSI e la pila TCP/IP?
 
 - A che livello lavora il router?  
- - A che livello lavorano i protocolli di routing?
+  - A che livello lavorano i protocolli di routing?
 
-- Quale protocollo lavora a livello 4 (transport layer ISO/OSI)?
- - Qual è la misura massima MTU in una rete ethernet?
+- Quale protocollo lavora a livello 4 (transport layer ISO/OSI)?  
+  - Qual è la misura massima MTU in una rete ethernet?
 
 - Fammi un esempio di indirizzo privato.  
   - Qual è il range degli indirizzi della classe C?
 
 - Che tipo di indirizzo è `127.0.0.1`?
 
-- Che cosa sono gli indirizzi ipv6? Cosa li differenzia dagli ipv4?
- - Quanto sono lunghi gli indirizzi ipv4?
+- Che cosa sono gli indirizzi ipv6? Cosa li differenzia dagli ipv4?  
+  - Quanto sono lunghi gli indirizzi ipv4?
 
-- Cos'è una tabella di routing?
- - A cosa serve una tabella di routing?
+- Cos'è una tabella di routing?  
+  - A cosa serve una tabella di routing?
 
 - Che protocollo lavora a livello 2 (data link layer ISO/OSI)?
 
 - Cos'è un Autonomous System (AS)?
 
-- Come si chiamano i protocolli di routing che lavorano all'interno di un Autonomous System (AS)?
- - Quali sono i protocolli che lavorano all'esterno di un AS?
+- Come si chiamano i protocolli di routing che lavorano all'interno di un Autonomous System (AS)?  
+  - Quali sono i protocolli che lavorano all'esterno di un AS?
 
 - RIP che protocollo utilizza?
 
