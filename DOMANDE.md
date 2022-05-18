@@ -13,7 +13,8 @@
 
 - Fai un esempio di collezione attiva e passiva durante la reconnaissance.
 
-- Cosa sono tcp/ip o http o ftp? -> Cos'è?
+- Cosa sono tcp/ip o http o ftp?  
+  - Cos'è?
 
 - Come strumenti possiedono gli attackers per conoscere le vulnerabilità nella fase di weaponisation riguardo gli ASSET? 
 
