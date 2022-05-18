@@ -1,10 +1,10 @@
 # PORTFOLIO
 Alcuni programmi applicativi su argomenti studiati.
 
-> `python iptobin.py 192.168.35.15 255.255.224.0`
+> `python iptobin.py 192.168.35.15 255.255.224.0`  
    192.168.32.0
    
-> `python iptobin.py 192.168.35.15 255.255.224.0 cidr` 
+> `python iptobin.py 192.168.35.15 255.255.224.0 cidr`  
    CIDR NOTATION: 192.168.32.0/19
    nil
 
