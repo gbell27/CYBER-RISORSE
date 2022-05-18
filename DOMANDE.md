@@ -33,8 +33,8 @@ KAPTOXA è anche chiamato BlackPOS o reedum.
 - Quale protocollo lavora a livello 4 (transport layer ISO/OSI)?
  - Qual è la misura massima MTU in una rete ethernet?
 
-- Fammi un esempio di indirizzo privato.
- - Qual è il range degli indirizzi della classe C?
+- Fammi un esempio di indirizzo privato.  
+  - Qual è il range degli indirizzi della classe C?
 
 - Che tipo di indirizzo è `127.0.0.1`?
 
@@ -69,8 +69,8 @@ KAPTOXA è anche chiamato BlackPOS o reedum.
 
 - OSPF che algoritmo utilizza per calcolare il percorso più veloce?
 
-- Come possono essere compilate le tabelle di routing?
- - Un amministratore può compilare una tabella di routing?
+- Come possono essere compilate le tabelle di routing? 
+  - Un amministratore può compilare una tabella di routing?
 
 - Qual è il comando per visualizzare le tabelle di routing su windows, linux e MacOS?
 
