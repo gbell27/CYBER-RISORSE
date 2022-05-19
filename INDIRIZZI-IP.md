@@ -2,7 +2,7 @@
 Ci sono cinque classi: A B C D E.  
 Questa è la struttura di ognuno, `x` rappresentano i numeri per i network, `h` i numeri per gli host.  
 Sono quattro numeri separati da punti in decimale, ma diventano 32 quando convertiti in binario.  
-A: `x.h.h.h` 1 bit e 3 bit  
+A: `x.h.h.h` 1 byte e 3 byte  
 B: `x.x.h.h` 2 e 2  
 C: `x.x.x.h` 3 e 1  
 
