@@ -25,8 +25,10 @@ Una macchina può riferirsi a sé stessa sia con gli indirizzi di loopback sia c
   - vanno da `192.0.0.0` a `223.255.255.0`  
   - PRIVATI da `192.168.0.0` a `192.168.255.255`   
 - D  
+  - sono indirizzi multicast  
   - vanno da `224.0.0.0` a `239.255.255.255`  
-  - PRIVATI da `` a ``  
+  - PRIVATI non ce ne sono.  
 - E:  
+  - sono indrizzi per la ricerca, sperimentali, riservati  
   - vanno da `240.0.0.0` a `255.255.255.255`  
-  - PRIVATI da `` a ``  
+  - PRIVATI non ce ne sono.  
