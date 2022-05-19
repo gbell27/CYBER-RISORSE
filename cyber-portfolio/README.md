@@ -17,6 +17,18 @@ B: `11111111.11111111.11100000.00000000`
 
 ## DNS lookup CLI in nodeJS
 
+Basato su questo [video](https://www.youtube.com/watch?v=-wMU8vmfaYo) che parla di DNS, in particolare di quando Facebook è andato in down per 5 ore.
+
+#### Risolvere il nome facebook.com nel terminale
+`dig @198.41.0.4 www.facebook.com` asking _a.root-servers.net_ Verisign dns.  
+`dig @192.12.94.30 www.facebook.com` asking _e.gtld-servers.net_ TLD server
+`dig @129.134.30.12 www.facebook.com` asking _a.ns.facebook.com_ Facebook nameserver  
+`QUERY: 1, ANSWER: 1  
+;; ANSWER SECTION:  
+facebook.com.		300	IN	A	157.240.231.35` 
+
+#### NodeJS cli
+
 file `rootservers.txt` contiene [Server Root](https://www.iana.org/domains/root/servers) copiati da https://www.iana.org/domains/root/servers.
 
 > Dependencies:  
@@ -31,5 +43,3 @@ node-dig-dns@0.3.2
 node-netstat@1.8.0  
 
 <!-- ![](GIF demo) -->
-
-
