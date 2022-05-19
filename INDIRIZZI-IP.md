@@ -32,3 +32,12 @@ Una macchina può riferirsi a sé stessa sia con gli indirizzi di loopback sia c
   - sono indrizzi per la ricerca, sperimentali, riservati  
   - vanno da `240.0.0.0` a `255.255.255.255`  
   - PRIVATI non ce ne sono.  
+
+### TABLE RIASSUNTIVA
+| Classe | Range |
+| :----: | :----:|
+| A | `0.0.0.0` - `127.255.255.255` |
+| B | `128.0.0.0` - `191.255.0.0` |
+|C | `192.0.0.0` - `223.255.255.0`|
+| D | `224.0.0.0` - `239.255.255.255` |
+| E | `240.0.0.0` - `255.255.255.255` |
