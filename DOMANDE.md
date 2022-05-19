@@ -77,7 +77,7 @@ KAPTOXA è anche chiamato BlackPOS o reedum.
 
 #### Le cose da sapere
 Bisogna sapere distinguere un indirizzo pubblico da un indirizzo privato.  
- 
+Vedi [INDIRIZZI](https://github.com/gbell27/CYBER-RISORSE/blob/master/INDIRIZZI-IP.md)
 
 #### Definizioni
 > SOC:  
