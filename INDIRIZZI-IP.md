@@ -7,21 +7,26 @@ B: `x.x.h.h` 2 e 2
 C: `x.x.x.h` 3 e 1  
 
 
-Ogni classe ha un intervallo pubblico e uno privato. La classe A ha indirizzi di loopback (da `127.0.0.1` a `127.255.255.255`)
+Ogni classe ha un intervallo pubblico e uno privato. La classe A ha indirizzi di loopback (da `127.0.0.1` a `127.255.255.255`)  
+Una macchina può riferirsi a sé stessa sia con gli indirizzi di loopback sia con gli _indirizzi ZERO_ che vanno da `0.0.0.0` a `0.255.255.255`
+
+**Gli indirizzi pubblici sono tutti quelli che non sono privati né riservati.**
 
 ### Range degli IP
-- A:  
-  - PUBBLICI da `` a ``  
-  - privati sono quelli di loopback detti prima  
+- A:
+  - vanno da `0.0.0.0` a `127.255.255.255`
+  - privati vanno da `10.0.0.0` a `10.255.255.255`
+  - riservati sono quelli di loopback e gli _indirizzi ZERO_ detti qualche riga più su. 
+  - gli indirizzi pubblici cominciano da `1.0.0.0`
 - B:  
-  - PUBBLICI da `` a ``  
-  - PRIVATI da `` a ``   
+  - vanno da `128.0.0.0` a `191.255.0.0`  
+  - PRIVATI da `172.16.0.0` a `172.31.255.255`   
 - C  
-  - PUBBLICI da `` a ``  
-  - PRIVATI da `` a ``   
+  - vanno da `192.0.0.0` a `223.255.255.0`  
+  - PRIVATI da `192.168.0.0` a `192.168.255.255`   
 - D  
-  - PUBBLICI da `` a ``  
+  - vanno da `224.0.0.0` a `239.255.255.255`  
   - PRIVATI da `` a ``  
 - E:  
-  - PUBBLICI da `` a ``  
+  - vanno da `240.0.0.0` a `255.255.255.255`  
   - PRIVATI da `` a ``  
