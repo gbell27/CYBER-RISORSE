@@ -75,6 +75,75 @@ KAPTOXA è anche chiamato BlackPOS o reedum.
 
 - Qual è il comando per visualizzare le tabelle di routing su windows, linux e MacOS?
 
+
+### 4.
+- Come sono fatti gli indirizzi MAC?  
+  - Da quanti bit sono composti?
+  - Che base numerica si usa per i numeri?
+
+- Che indirizzo è `FF:FF:FF:FF:FF:FF`?  
+  - Per cosa viene usato?
+
+- A che serve la three-way handshake?
+
+- Quali campi dell'header TCP sono usati nella prima fase della three-way handshake?  
+  - Cosa sono SYN e ACK?  
+  - Quale altro campo viene compilato durante la prima fase della three-way handshake?  
+
+- Quale altro protocollo (oltre al TCP) lavora al 4° livello?
+
+- Quali sono le differenze tra TCP e UDP?
+
+- Come funziona il protocollo ARP?
+
+- Cos'è la MAC table?  
+  - Su che dispositivo si trova?
+
+- A che serve il protocollo ICMP?
+  - Che comando del Terminale (o CMD) lo utilizza?
+
+- A che serve il protocollo DHCP?
+
+- Quali sono le 4 fasi del protocollo DHCP?  
+  - Qual è un evento opzionale che può avvenire?
+
+- Cos'è il periodo di lease?  
+  - Cosa succede quando sta per scadere?  
+  - Cosa succede quando scade? Come si chiama l'evento?
+
+- Cosa sono le porte?
+
+- Cos'è un DNS?
+
+- A che livello della pila ISO/OSI lavora il protocollo DNS?
+
+- Qual è il percorso di un pacchetto che parte da un client e raggiunge un web server?
+
+- Che comando si utilizza per trovare un indirizzo IP su LINUX?
+
+- Chi traduce il nome di un dominio in un indirizzo IP?
+
+- Che numero ha la porta del servizio FTP?  
+  - Che numero ha la porta del servizio SSH?  
+  - Che numero ha la porta del servizio POP3?  
+  - Che numero ha la porta del servizio SFTP?  
+  - Che numero ha la porta del servizio IMAP?
+
+- Quali server DNS vengono contattati quando si deve risolvere un dominio?
+
+- Che comando si utilizza su LINUX per conoscere le porte in ascolto, le porte aperte e i servizi attivi?
+
+- Dove risiede il server DHCP a casa tua?
+
+- Quante sono le porte in totale?  
+  - Come si chiama il primo gruppo di porte più importanti? Quante sono?
+
+- Qual è la differenza tra protocollo IMAP e POP3?
+
+- A cosa serve il top level domain (TLD)?  
+  - Che DNS possiede informazioni su questo?
+  
+
 #### Le cose da sapere
 Bisogna sapere distinguere un indirizzo pubblico da un indirizzo privato.  
 Vedi [INDIRIZZI](https://github.com/gbell27/CYBER-RISORSE/blob/master/INDIRIZZI-IP.md)
@@ -89,6 +158,11 @@ Computer emergency response team, si occupa della incident response.
 > CONVERGENZA (dei protocolli di routing):
 tempo necessario ad arrivare a uno stato stabile.
 
+> ARP:  
+Address resolution protocol. Protocollo che lavora al terzo livello, invia un pacchetto e controlla se c'è un indirizzo IP associato alla macchina desiderata.
+
+> TLD:
+Top level domain, parte finale di un dominio (ex: .com, .it).
 
 [kaptoxa]: https://en.wikipedia.org/wiki/BlackPOS_Malware
 
