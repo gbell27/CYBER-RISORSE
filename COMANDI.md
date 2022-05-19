@@ -21,6 +21,8 @@ LINUX    `netstat -tunp`
 MACOS    `netstat -p tcp -p udp` `lsof -n -i4TCP -i4UDP`  
 WINDOWS  `netstat -ano`
 
-LINUX    ``  
+<!--
+LINUX    `` 
 MACOS    ``  
 WINDOWS  ``  
+-->
