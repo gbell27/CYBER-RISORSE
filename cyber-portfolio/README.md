@@ -19,7 +19,7 @@ B: `11111111.11111111.11100000.00000000`
 
 file `rootservers.txt` contiene [Server Root](https://www.iana.org/domains/root/servers) copiati da https://www.iana.org/domains/root/servers.
 
-> Dependencies:
+> Dependencies:  
 node@14.17.6  
 npm@8.8.0  
 inquirer@8.2.4     
