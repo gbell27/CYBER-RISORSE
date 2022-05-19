@@ -18,7 +18,7 @@ WINDOWS  `arp -a`
 
 # Visualizzare le connessioni in corso e le porte in ascolto
 LINUX    `netstat -tunp`  
-MACOS    `netstat -p tcp -p udp` `lsof -n -i4TCP -i4UDP`  
+MACOS    `netstat -p tcp -p udp` oppure `lsof -n -i4TCP -i4UDP`  
 WINDOWS  `netstat -ano`
 
 <!--
