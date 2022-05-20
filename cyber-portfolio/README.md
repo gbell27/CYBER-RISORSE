@@ -2,13 +2,18 @@
 Alcuni programmi applicativi su argomenti studiati.
 
 ## Network subnetting tool in Python `iptobin.py`
-> `python iptobin.py 192.168.35.15 255.255.224.0`  
-   192.168.32.0
-   
-> `python iptobin.py 192.168.35.15 255.255.224.0 cidr`  
-   CIDR NOTATION: 192.168.32.0/19  
-   nil
+> `python iptobin.py -i 192.168.35.15 -o 1000 1000 -v -c`  
+ex. Creare 2 sottoreti da 1000 host ciascuna.
 
+
+> `python iptobin.py --help`  
+Flags:
+- i  indirizzo ip di partenza
+- o  numero di host, se ne possono mettere  
+     più di uno, così da creare più sottoreti   
+- v  verbose, mostra base, primo indirizzo, ultimo e broadcast  
+- c  cidr notation on oppure off.  
+- h  help  
 
 > A: `11000000.10101000.00100011.00001111`   
 B: `11111111.11111111.11100000.00000000`  
