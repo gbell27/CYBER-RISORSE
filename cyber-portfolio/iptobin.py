@@ -138,9 +138,8 @@ for net in args.hosts:
     last_str = bintoip(last)
      
     if args.cidr:
-        ip_cidr = local_scope_ip
         net_cidr = iptobin(netmask)
-        print(f"CIDR NOTATION: {ip_cidr}/{net_cidr.count('1')}") 
+        print(f"CIDR NOTATION: {base}/{net_cidr.count('1')}") 
 
     if args.verbose:
         print(f"""CREATING NETWORK OF {net} hosts
