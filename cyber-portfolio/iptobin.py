@@ -113,7 +113,7 @@ parser.add_argument("-c", "--cidr", action="store_true", \
 args = parser.parse_args()
 
 local_scope_ip = args.ip
-for net in args.hosts: 
+for net in args.hosts:
     masks = create_netmask(net)
     netmask = masks[0]
     hostmask = masks[1]
@@ -127,10 +127,9 @@ for net in args.hosts:
     
     last = add_n_to_bin(broadcast, "-1") # SUBTRACTING one from broadcast.
     last_str = bintoip(last)
-    
-    local_scope_ip = add_n_to_bin(broadcast, 1)
+     
     if args.cidr:
-        ip_cidr = bintoip(local_scope_ip)
+        ip_cidr = local_scope_ip
         net_cidr = str(iptobin(netmask))
         print(f"CIDR NOTATION: {ip_cidr}/{net_cidr.count('1')}") 
 
@@ -141,8 +140,8 @@ for net in args.hosts:
             LAST: {last_str}
             BROADCAST: {broadcast_str} \n\n
             """)
-
-
+    #LAST STEP for this subnet
+    local_scope_ip = bintoip(add_n_to_bin(broadcast, 1))
 
 
 
