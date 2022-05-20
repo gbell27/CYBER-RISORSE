@@ -3,14 +3,30 @@ Alcuni programmi applicativi su argomenti studiati.
 
 ## Network subnetting tool in Python `iptobin.py`
 > `python iptobin.py -i 192.168.35.15 -o 1000 1000 -v -c`  
-ex. Creare 2 sottoreti da 1000 host ciascuna.
+ex. Creare 2 sottoreti da 1000 host ciascuna  
+CIDR NOTATION: 192.168.32.0/22  
+CREATING NETWORK OF 1000 hosts  
+            BASE: 192.168.32.0  
+            FIRST: 192.168.32.1  
+            LAST: 192.168.35.254  
+            BROADCAST: 192.168.35.255   
+  
+  
+              
+CIDR NOTATION: 192.168.36.0/22  
+CREATING NETWORK OF 1000 hosts  
+            BASE: 192.168.36.0  
+            FIRST: 192.168.36.1  
+            LAST: 192.168.39.254  
+            BROADCAST: 192.168.39.255   
+
 
 
 > `python iptobin.py --help`  
 Flags:
 - i  indirizzo ip di partenza
 - o  numero di host, se ne possono mettere  
-     più di uno, così da creare più sottoreti   
+     quanti se ne vogliono, così da creare più sottoreti   
 - v  verbose, mostra base, primo indirizzo, ultimo e broadcast  
 - c  cidr notation on oppure off.  
 - h  help  
