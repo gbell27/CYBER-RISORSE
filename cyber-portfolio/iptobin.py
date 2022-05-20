@@ -16,7 +16,7 @@ def iptobin(ip, formatted=False):
     if formatted:
         return ".".join(res)
     else:
-        return int("".join(res))
+        return "".join(res)
 
 
 def bintoip(bits):
@@ -25,13 +25,14 @@ def bintoip(bits):
     Prende un int di lunghezza 32, lo divide in pezzi di 8,
     ogni pezzo lo converte in decimale, restituisce l'ip come stringa.
     """
-    bits = str(bits)
+    if type(bits) != str:
+        raise TypeError
     bit_res = []
     if len(bits) == 32:
         for i in range(0,32, 8):
             bit_res.append(bits[i: i+8])
     else:
-        raise Exception
+        raise ValueError
 
     res = []
     for i in bit_res:
@@ -49,11 +50,14 @@ def bitwise_and_ip(ip, netmask, formatted=False):
     poi presi 8 bit alla volta e 
     tornato un ip risultato dell'operazione.
     """
-    ip = str(iptobin(ip))
-    netmask = str(iptobin(netmask))
+    ip = iptobin(ip)
+    netmask = iptobin(netmask)
     int1 = int(ip, 2)
     int2 = int(netmask, 2)
-    bin_res = bin(int1 & int2)[2:]  #risultato ancora non è un ip 
+    bin_res = bin(int1 & int2)[2:]  #risultato ancora non è un ip
+    if len(bin_res) != 32:
+        while len(bin_res) < 32:
+            bin_res = "0" + bin_res
     #dividere in chunks
     ip_res = bintoip(bin_res)
     if formatted:
@@ -92,7 +96,10 @@ def add_n_to_bin(binary, n):
     n = int(n)
     binary = str(binary)
     res = bin(int(binary, 2) + n)
-    return res[2:]
+    res = res[2:]  #removing leading '0b'
+    while len(res) < 32:
+        res = "0" + res
+    return res
 
 
 #input
@@ -122,7 +129,9 @@ for net in args.hosts:
     first = add_n_to_bin(iptobin(base), 1)
     first_str = bintoip(first)
     
-    broadcast = bin(int(str(iptobin(base)), 2) | int(hostmask, 2))[2:]  # bitwise OR to turn all host bits on
+    broadcast = bin(int(iptobin(base), 2) | int(hostmask, 2))[2:]  # bitwise OR to turn all host bits on
+    while len(broadcast) < 32:
+        broadcast = "0" + broadcast
     broadcast_str = bintoip(broadcast)
     
     last = add_n_to_bin(broadcast, "-1") # SUBTRACTING one from broadcast.
@@ -130,7 +139,7 @@ for net in args.hosts:
      
     if args.cidr:
         ip_cidr = local_scope_ip
-        net_cidr = str(iptobin(netmask))
+        net_cidr = iptobin(netmask)
         print(f"CIDR NOTATION: {ip_cidr}/{net_cidr.count('1')}") 
 
     if args.verbose:
@@ -144,8 +153,8 @@ for net in args.hosts:
     local_scope_ip = bintoip(add_n_to_bin(broadcast, 1))
 
 
-
 """
+
 #TESTS
 
 import unittest
