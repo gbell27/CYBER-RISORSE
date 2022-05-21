@@ -20,10 +20,12 @@ with open("rootservers.txt") as f:
 res = []
 for host,ip,operator in text:
     entry = {}
-    entry["hostname"] = host
-    entry["ipv4"] = ip[0]
-    entry["ipv6"] = ip[1].strip()  #removing leading space
-    entry["operator"] = operator
+    # bad solution, using strip to remove trailing and leading whitespace
+    # for each entry
+    entry["hostname"] = host.strip()
+    entry["ipv4"] = ip[0].strip()
+    entry["ipv6"] = ip[1].strip()
+    entry["operator"] = operator.strip()
     res.append(entry)
     
 json_res = json.dumps(res)
