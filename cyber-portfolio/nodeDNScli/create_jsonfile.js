@@ -26,7 +26,7 @@ const parsingCallback = (res) => {
         var record = parse_fields(entries[i], entries[i+1], entries[i+2]);
 	final_obj.push(record);
         } 
-    return Promise.resolve(final_obj);
+    return final_obj;
 }
 
 
