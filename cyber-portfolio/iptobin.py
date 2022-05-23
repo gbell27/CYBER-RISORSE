@@ -143,7 +143,7 @@ for net in args.hosts:
 
     if args.verbose:
         print(f"""CREATING NETWORK OF {net} hosts
-            BASE: {base}
+            NETWORK PREFIX: {base}
             FIRST: {first_str}
             LAST: {last_str}
             BROADCAST: {broadcast_str} \n\n
