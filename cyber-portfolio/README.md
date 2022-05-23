@@ -6,13 +6,13 @@ ex. Creare 2 sottoreti da 1000 host ciascuna
 > `python iptobin.py -i 192.168.35.15 -o 1000 1000 -v -c`  
 CIDR NOTATION: 192.168.32.0/22  
 CREATING NETWORK OF 1000 hosts  
-            BASE: 192.168.32.0   
+   NETWORK PREFIX: 192.168.32.0   
             FIRST: 192.168.32.1   
             LAST: 192.168.35.254  
             BROADCAST: 192.168.35.255 <br /><br />
 CIDR NOTATION: 192.168.36.0/22  
 CREATING NETWORK OF 1000 hosts  
-            BASE: 192.168.36.0  
+   NETWORK PREFIX: 192.168.36.0  
             FIRST: 192.168.36.1  
             LAST: 192.168.39.254  
             BROADCAST: 192.168.39.255   
