@@ -24,7 +24,7 @@ Flags:
 - i  indirizzo ip di partenza
 - o  numero di host, se ne possono mettere  
      quanti se ne vogliono, così da creare più sottoreti   
-- v  verbose, mostra base, primo indirizzo, ultimo e broadcast  
+- v  verbose, mostra indirizzo di rete, primo indirizzo, ultimo e broadcast  
 - c  cidr notation on oppure off.  
 - h  help  
 
