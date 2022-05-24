@@ -46,18 +46,20 @@ Basato su questo [video](https://www.youtube.com/watch?v=-wMU8vmfaYo) che parla 
 facebook.com.		300	IN	A	157.240.231.35` 
 
 #### NodeJS cli
+`node dnsnodecli.js facebook.com`  
+
+![NodeCliDEMO](https://github.com/gbell27/CYBER-RISORSE/blob/master/cyber-portfolio/nodeDNScli/PeekscreencastDEMO.gif)
+
+(screencast GIF realizzata con https://github.com/phw/peek)
 
 file `rootservers.txt` contiene [Server Root](https://www.iana.org/domains/root/servers) copiati da https://www.iana.org/domains/root/servers.
+
 
 > Dependencies:  
 node@14.17.6  
 npm@8.8.0  
 inquirer@8.2.4     
-chalk@5.0.1  
-commander@9.2.0  
-inquirer-press-to-continue@1.1.2  
-inquirer-tree-prompt@1.1.2  
 node-dig-dns@0.3.2  
-node-netstat@1.8.0  
+axios@0.27.2
+cheerio@1.0.0 
 
-<!-- ![](GIF demo) -->
