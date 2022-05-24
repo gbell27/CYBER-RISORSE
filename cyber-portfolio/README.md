@@ -60,6 +60,6 @@ node@14.17.6
 npm@8.8.0  
 inquirer@8.2.4     
 node-dig-dns@0.3.2  
-axios@0.27.2
+axios@0.27.2  
 cheerio@1.0.0 
 
