@@ -56,8 +56,7 @@ Ha due opzioni: `-size` e `-type`.
 
 
 > `ls` 	stampa il contenuto di una directory o i nomi dei file e altre informazioni.  
-Ha le opzioni `-a -l -t -h -r`, si possono usare insieme tipo: `ls -altrh`.  
-Ha anche le opzioni `-type` e `-size`.  
+Ha le opzioni `-a -l -t -h -r`, si possono usare insieme tipo: `ls -altrh` o `ls -alt` o `ls -l` .    
 
 `-a`	mostra anche i file e le directory nascoste, quelli che iniziano col punto ex. `.ssh`  
 `-l`    long format, mostra privilegi, timestamp, size e autore.  
