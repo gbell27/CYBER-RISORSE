@@ -69,7 +69,7 @@ Ha le opzioni `-a -l -t -h -r`, si possono usare insieme tipo: `ls -altrh` o `ls
 `.`     simbolo per la directory corrente.  
 `..`    simbolo per la parent directory, directory precedente.  
 `touch` modifica il timestamp di un file, oppure crea un nuovo file vuoto.  
-`cd`    cambia la directory corrente. `cd` senza argomento ha lo stesso effetto di `cd ~`, riportano alla home directory.
+`cd`    cambia la directory corrente. `cd` senza argomento ha lo stesso effetto di `cd ~`, riportano alla home directory.  
 `pwd`   "print working directory" stampa il path relativo della directory corrente rispetto alla home directory oppure rispetto a "root" `/`.    
 `mkdir` crea una nuova directory, opzione `-p` crea tutto un percorso di directory.  
 `rmdir` rimuove una directory se non contiene niente.  
