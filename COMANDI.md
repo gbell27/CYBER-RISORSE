@@ -75,6 +75,6 @@ Ha le opzioni `-a -l -t -h -r`, si possono usare insieme tipo: `ls -altrh` o `ls
 `rmdir` rimuove una directory se non contiene niente.  
 `cp`    crea una copia.  
 `mv`    modifica il path di una risorsa, come conseguenza può essere anche usato per rinominare file o directory.  
-`rm`    rimuove un file, con l'opzione `-R` (ricorsivo) rimuove una directory perché rimuove tutti file. Ciò che non potrebbe fare `rmdir`.
+`rm`    rimuove un file, con l'opzione `-R` (ricorsivo) rimuove una directory perché rimuove tutti file. Ciò che non potrebbe fare `rmdir`.  
 `ln`    crea un link `ln TARGET LINK_NAME` ex. `ln file.txt gabriele`, `cat gabriele` mostra il contenuto di file.txt .
 
