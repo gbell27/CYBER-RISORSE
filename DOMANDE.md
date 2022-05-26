@@ -143,6 +143,43 @@ KAPTOXA è anche chiamato BlackPOS o reedum.
 - A cosa serve il top level domain (TLD)?  
   - Che DNS possiede informazioni su questo?
   
+### 5
+- Quali sono i flag dei cookie?  
+  - A che servono?
+
+- L'id sessione (token), scade quando la sessione viene conclusa?  
+  - Il "resta connesso" termina la sessione?
+
+- Quali sono i campi di una richiesta HTTP?
+
+### 6
+
+- Cos'è e a cosa serve il subnetting?  
+  - A che livello funziona?  
+  - A che livello funzionano le VLAN?  
+  - Quali sono altri metodi di sicurezza per le reti?  
+
+- Cos'è un log server?
+
+- Cos'è un proxy?  
+  - Cos'è un reverse proxy? A che serve?
+
+- Cos'è un SIEM?  
+  - Per cosa differisce da un log server?  
+  - Grazie a che "indicatore" funziona?  
+
+- Qual è la differenza tra firewall stateless e stateful?
+
+- Cos'è un IDS anomaly based?
+
+- Cos'è una VPN?
+
+### 7
+- A che serve il comando `echo` in Linux?
+
+- A che serve il comando `apropos`?
+
+- Cos'è una distribuzione Linux?
 
 #### Le cose da sapere
 Bisogna sapere distinguere un indirizzo pubblico da un indirizzo privato.  
@@ -163,6 +200,9 @@ Address resolution protocol. Protocollo che lavora al terzo livello, invia un pa
 
 > TLD:
 Top level domain, parte finale di un dominio (ex: .com, .it).
+
+> IoC:
+Indicator of Compromise, Indicatori di compromissione: signature (firme) che identificano e rilevano intrusioni in un sistema.
 
 [kaptoxa]: https://en.wikipedia.org/wiki/BlackPOS_Malware
 
