@@ -15,8 +15,7 @@ Una macchina può riferirsi a sé stessa sia con gli indirizzi di loopback sia c
 ### Range degli IP
 - A:
   - vanno da `1.0.0.0` a `127.255.255.255`
-  - privati vanno da `10.0.0.0` a `10.255.255.255`,    CIDR `10.0.0.0/8`
-  - riservati sono quelli di loopback e gli _indirizzi ZERO_ detti qualche riga più su. 
+  - privati vanno da `10.0.0.0` a `10.255.255.255`,    CIDR `10.0.0.0/8`  
   - gli indirizzi pubblici cominciano da `1.0.0.0`
 - B:  
   - vanno da `128.0.0.0` a `191.255.0.0`  
