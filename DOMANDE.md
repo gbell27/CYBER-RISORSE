@@ -152,6 +152,8 @@ KAPTOXA è anche chiamato BlackPOS o reedum.
 
 - Quali sono i campi di una richiesta HTTP?
 
+- A che livello lavora il protocollo HTTP?
+
 ### 6
 
 - Cos'è e a cosa serve il subnetting?  
@@ -180,6 +182,25 @@ KAPTOXA è anche chiamato BlackPOS o reedum.
 - A che serve il comando `apropos`?
 
 - Cos'è una distribuzione Linux?
+
+### 8
+- Cosa indica lo slash `/` in ambiente Linux?
+
+- Cosa fa il comando `ls`?
+
+- In cosa consiste l' `FHS` (file hierarchy system)?  
+  - Qual è il nome della directory con i file di configurazione? `/etc`
+
+- Cosa fa il comando `history`?
+
+- Cosa fa il comando `mkdir`?  
+  - A cosa serve l'opzione `-p`?
+
+- Cosa fa il comando `rmdir`?
+
+- Come possono essere listati i file nascosti?
+
+- Qual è la differenza tra path relativo e path assoluto?
 
 #### Le cose da sapere
 Bisogna sapere distinguere un indirizzo pubblico da un indirizzo privato.  
