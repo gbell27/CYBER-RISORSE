@@ -83,7 +83,7 @@ Ha le opzioni `-a -l -t -h -r`, si possono usare insieme tipo: `ls -altrh` o `ls
 `less`   mostra il file impaginandolo, ma dentro a una finestra tipo un editor. Premendo `q` si esce.  
 `tail`   `tail file.txt` stampa le ultime 10 righe di un file di default, con l'opzione `-n 5` oppure `-5` per esempio ne stampa 5.  
 `head`   `head file.txt` stampa le prime 10 righe di un file di default, con l'opzione `-n 5` oppure `-5` per esempio ne stampa 5.  
-`grep`  serve a trovare una particolare parola in un file, l'opzione `-n`  `-l` `-r`   
+`grep`  serve a trovare una particolare parola in un file, l'opzione `-n` mostra la riga in cui è stata trovata la parola, `-l` mostra solo il nome del file contenente la parola cercata, `-r` serve a leggere tutti i file in una directory quindi fa una ricerca ricorsiva.   
 `wc`    "word count", senza opzioni mostra numero di righe, n. parole, n. caratteri. Altrimenti per visualizzarli separatamente si usano le rispettive opzioni `-l` `-w` e `-c`.  
 
 
