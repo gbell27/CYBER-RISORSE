@@ -90,7 +90,7 @@ Ha le opzioni `-a -l -t -h -r`, si possono usare insieme tipo: `ls -altrh` o `ls
 #### Struttura permessi di un file o directory  
 Si possono vedere con `ls -l`
 
-esempio: `ls -l`
+esempio: `ls -l` ritorna  
 `dr--r--r-- 1 root root    4096 apr  9 20:41  Testi`
 è una directory, ha permessi di lettura per utente, gruppi e altri, creata da root, del gruppo root, ha una dimensione di 4096 byte, timestamp è 9 aprile alle 20:41, chiamata "Testi".
 la prima `d` rappresenta il tipo di file, infatti è una directory, i seguenti sono i permessi.
