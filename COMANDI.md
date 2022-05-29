@@ -76,5 +76,39 @@ Ha le opzioni `-a -l -t -h -r`, si possono usare insieme tipo: `ls -altrh` o `ls
 `cp`    crea una copia.  
 `mv`    modifica il path di una risorsa, come conseguenza può essere anche usato per rinominare file o directory.  
 `rm`    rimuove un file, con l'opzione `-R` (ricorsivo) rimuove una directory perché rimuove tutti file. Ciò che non potrebbe fare `rmdir`.  
-`ln`    crea un link `ln TARGET LINK_NAME` ex. `ln file.txt gabriele`, `cat gabriele` mostra il contenuto di file.txt .
+`ln`    crea un HARDlink `ln TARGET LINK_NAME` ex. `ln file.txt gabriele`, `cat gabriele` mostra il contenuto di file.txt. Con l'opzione `-s` crea un link simbolico, quindi legato al path specificato.
+
+> `tac`  è l'inverso di `cat`, non stampa dalla prima all'ultima riga, stampa dall'ultima alla prima.  
+`more`   mostra il file impaginandolo. Premendo `q` si ritorna alla riga di comando.  
+`less`   mostra il file impaginandolo, ma dentro a una finestra tipo un editor. Premendo `q` si esce.  
+`tail`   `tail file.txt` stampa le ultime 10 righe di un file di default, con l'opzione `-n 5` oppure `-5` per esempio ne stampa 5.  
+`head`   `head file.txt` stampa le prime 10 righe di un file di default, con l'opzione `-n 5` oppure `-5` per esempio ne stampa 5.  
+`grep`  serve a trovare una particolare parola in un file, l'opzione `-n`  `-l` `-r`   
+`wc`    "word count", senza opzioni mostra numero di righe, n. parole, n. caratteri. Altrimenti per visualizzarli separatamente si usano le rispettive opzioni `-l` `-w` e `-c`.  
+
+
+#### Struttura permessi di un file o directory  
+Si possono vedere con `ls -l`
+
+esempio: `ls -l`
+`dr--r--r-- 1 root root    4096 apr  9 20:41  Testi`
+è una directory, ha permessi di lettura per utente, gruppi e altri, creata da root, del gruppo root, ha una dimensione di 4096 byte, timestamp è 9 aprile alle 20:41, chiamata "Testi".
+la prima `d` rappresenta il tipo di file, infatti è una directory, i seguenti sono i permessi.
+I 9 bit dei permessi seguono la regola UGO.
+
+Ecco una tabella:
+
+|  user | group | other |
+| :---: | :---: | :---: |
+|  rwx  |  rwx  |  rwx  |
+| 4+2+1 | 4+2+1 | 4+2+1 |  
+
+ex.
+tutti i bit attivati `rwxrwxrwx` in ottale sono `777`, tutti hanno tutti i permessi.
+`rwxrwxr--` in ottale è `4+2+1 4+2+1 4 = 774`. Quindi utente e gruppo hanno tutti i permessi, gli altri solo di leggere.
+
+
+> `chown`    cambia l'utente `chown uid file`, si può usare lo userid o semplicemente il nome.  
+`chgrp`    cambia il gruppo `chgrp groupid file`, si può usare il groupid o semplicemente il nome.  
+`chmod`    cambia i permessi, si possono usare i simboli `+ e -` tipo `chmod u+r file` oppure i numeri in ottale `chmod 777 file`. Nel primo, AGGIUNGE il permesso di lettura all'utente, nel secondo attiva tutti i bit, quindi dà tutti i permessi a tutti.  
 
