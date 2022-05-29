@@ -118,5 +118,5 @@ tutti i bit attivati `rwxrwxrwx` in ottale sono `777`, tutti hanno tutti i perme
 `?`   Può essercene uno solo oppure no, è opzionale.  
 `[]`    Dei possibili caratteri che si possono trovare tipo: [123] uno di questi tre, oppure [0-9] un solo qualsiasi numero da 0 a 9, oppure [A-Z] una sola qualsiasi lettera maiuscola dalla A alla Z.  
 ex. `rm *.txt` elimina qualsiasi file di testo (.txt) nella working directory.  
-ex. `rm file[0-9]`  elimina qualsiasi file che abbia come nome "file" e un numero come: `file3 file5 file9 file1`.  
-
+ex. `rm file[0-9]`  elimina qualsiasi file che abbia come nome "file" e un numero come: `file3 file5 file9 file1`.    
+ex. `echo *`  stampa il nome di tutto ciò che è presente nella working directory, quindi potrebbe sostituire `ls`.  
