@@ -120,3 +120,60 @@ tutti i bit attivati `rwxrwxrwx` in ottale sono `777`, tutti hanno tutti i perme
 ex. `rm *.txt` elimina qualsiasi file di testo (.txt) nella working directory.  
 ex. `rm file[0-9]`  elimina qualsiasi file che abbia come nome "file" e un numero come: `file3 file5 file9 file1`.    
 ex. `echo *`  stampa il nome di tutto ciò che è presente nella working directory, quindi potrebbe sostituire `ls`.  
+
+> Ci sono tre file collegati a un processo:    
+stdin, ci si riferisce anche usando &0  
+stdout &1  
+stderr &2  
+File speciali  
+`/dev/null` se viene utilizzato come output, lo distrugge e viene perso.  
+`/dev/zero` fornisce uno stream binario infinito di valori zero che verranno visualizzati come `^@`.  
+`/dev/random` fornisce uno stream binario di valori random.  
+
+> Direttive per il redirezionamento  
+`<`  redireziona l'input  
+`<<`  redireziona l'input quando la sorgente è l'interprete dei comandi  
+`>`  redireziona l'output sovrascrivendo  
+`>>`  redireziona l'output in "append mode", non sovrascrive, aggiunge alla fine.  
+EX. `cp file1 file2` è equivalente a `cat file1 > file2`  
+`<` è una direttiva del linguaggio SHELL, perciò anche se posto all'inizio del comando, viene interpretato correttamente.  
+`cat < file1` è equivalente a `< file1 cat`    
+Redirezionare stdout e stderr a due file diversi, magari per loggare gli errori.  
+ex. Comando volutamente sbagliato che produce un errore.  
+`cp file cartella_non_esistente/file 1> success.log 2> error.log`  
+l'errore verrà scritto nel file `error.log`  
+
+> `tee`  permette il redirezionamento dell'output a un file e allo stdout contemporaneamente.  
+`sort`   mostra le righe in maniera ordinata, `-n` considera tutti i caratteri non numerici come zero, quindi ordina solo secondo i valori numerici, `-k` serve a specificare il campo della chiave secondo cui effettuare l'ordinamento.  
+`uniq`  serve ad eliminare le ripetizioni degli stessi valori adiacenti, `-c` conta il numero di ripetizioni dei singoli valori unici, solitamente utilizzato con `sort`  
+`nl`  numera le linee, come `grep -n`    
+`tr`  Translate, sostituisce un carattere con un altro.  
+`cut`  serve a spezzare le righe in campi, `-d` specifica il delimitere dei campi, `-f` specifica il campo da selezionare.  
+
+> REGEX  
+`^` comincia con   
+`$` finisce con  
+`.` qualsiasi carattere  
+`*` zero o qualsiasi numero di occorrenze di qualsiasi carattere   
+
+> PIPING `|`  
+passa l'output del primo comando all'input del secondo.  
+I comandi vengono eseguiti in maniera sequenziale e, dato che sono disposti in serie,  
+se l'output di un comando alla sinistra del pipe fallisce, i seguenti non verranno eseguiti.  
+
+
+> `sed` "Stream editor"   
+`-n` "quiet mode", non stampa tutto il match, ma solo quello che ci interessa.  
+`p`  stampa  
+`d`  cancella  
+`s`  `s/from/to/`   sostituisce una parola con un'altra.  
+EX. `sed 2,5d` cancella dalla seconda alla quinta riga, `sed /ciao/d` cancella tutte le righe in cui ci sia scritto "ciao".  
+
+> `awk`  Aho Weinberger Kernighan, i record sono le linee, i field sono i campi in cui vengono spezzate.  
+la sintassi è awk ' {statement} ', si può specificare il delimiter con `-F`, all'interno delle graffe si possono usare i seguenti simboli:  
+`$FS` è il delimiter corrente  
+`$n`  seleziona l'n-esimo campo    
+`$0`  seleziona l'intero record  
+`$NF` è il numero di campi  
+`$NR` è il numero di record  
+`substr($n, from, to)`  seleziona i caratteri di un campo da un indice a un altro. ex. `substr($0, 2, 4)` seleziona solo dal secondo al quarto carattere di tutto il record.  
