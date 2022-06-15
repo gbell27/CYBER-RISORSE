@@ -213,17 +213,23 @@ Security operations center, centro che si occupa di servizi di gestione, monitor
 > CERT o CSIRT:  
 Computer emergency response team, si occupa della incident response.
 
-> CONVERGENZA (dei protocolli di routing):
+> CONVERGENZA (dei protocolli di routing):  
 tempo necessario ad arrivare a uno stato stabile.
 
 > ARP:  
 Address resolution protocol. Protocollo che lavora al terzo livello, invia un pacchetto e controlla se c'è un indirizzo IP associato alla macchina desiderata.
 
-> TLD:
+> TLD:  
 Top level domain, parte finale di un dominio (ex: .com, .it).
 
-> IoC:
+> IoC:  
 Indicator of Compromise, Indicatori di compromissione: signature (firme) che identificano e rilevano intrusioni in un sistema.
+
+> IMAP & POP3:  
+Sono due protocolli di posta elettronica (funzionano a livello applicativo), la differenza tra i due è che utilizzando POP3, un client scarica completamente la posta dal server; utilizzando IMAP il server mantiene una copia della posta e ciò permette l'utilizzo di più dispositivi.
+
+> UNICAST MULTICAST BROADCAST:  
+Sono 3 modalità di trasmissione dei pacchetti: nell' _Unicast_ il pacchetto viene indirizzato verso una singola macchina, nel _Multicast_ il pacchetto viene indirizzato verso più macchine, nel _BROADCAST_ il pacchetto viene indirizzato verso **tutte** le macchine di una rete.
 
 [kaptoxa]: https://en.wikipedia.org/wiki/BlackPOS_Malware
 

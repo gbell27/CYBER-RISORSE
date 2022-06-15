@@ -76,7 +76,7 @@ Ha le opzioni `-a -l -t -h -r`, si possono usare insieme tipo: `ls -altrh` o `ls
 `cp`    crea una copia.  
 `mv`    modifica il path di una risorsa, come conseguenza può essere anche usato per rinominare file o directory.  
 `rm`    rimuove un file, con l'opzione `-R` (ricorsivo) rimuove una directory perché rimuove tutti file. Ciò che non potrebbe fare `rmdir`.  
-`ln`    crea un HARDlink `ln TARGET LINK_NAME` ex. `ln file.txt gabriele`, `cat gabriele` mostra il contenuto di file.txt. Con l'opzione `-s` crea un link simbolico, quindi legato al path specificato.
+`ln`    crea un HARDlink (come un pointer) `ln TARGET LINK_NAME` ex. `ln file.txt gabriele`, `cat gabriele` mostra il contenuto di file.txt perché l'HARD LINK e il file puntano allo stesso indirizzo di memoria, il file esiste finché ogni riferimento alla memoria non viene cancellato. Con l'opzione `-s` crea un link simbolico, quindi copia soltanto il path relativo del file, infatti muovendo il file link, non funzionerà più (risulterà rotto).
 
 > `tac`  è l'inverso di `cat`, non stampa dalla prima all'ultima riga, stampa dall'ultima alla prima.  
 `more`   mostra il file impaginandolo. Premendo `q` si ritorna alla riga di comando.  
@@ -176,4 +176,64 @@ la sintassi è awk ' {statement} ', si può specificare il delimiter con `-F`, a
 `$0`  seleziona l'intero record  
 `$NF` è il numero di campi  
 `$NR` è il numero di record  
-`substr($n, from, to)`  seleziona i caratteri di un campo da un indice a un altro. ex. `substr($0, 2, 4)` seleziona solo dal secondo al quarto carattere di tutto il record.  
+`substr($n, from, to)`  seleziona i caratteri di un campo da un indice a un altro. ex. `substr($0, 2, 4)` seleziona solo dal secondo al quarto carattere di tutto il record. 
+
+> VARIABILI IN BASH  
+sono dei nomi a cui è stato assegnato un valore.  
+`=`    operatore di assegnamento, serve ad assegnare un valore alla variabile.  
+`$`    operatore di riferimento, serve a vedere il valore della variabile.  
+`env`  mostra tutte le variabili ambientali.  
+`unset` cancella una variabile.  
+
+> _VARIABILI SPECIALI_  
+`PATH`  l'insieme di directory in cui vengono cercati gli eseguibili dei comandi, la priorità va da sinistra verso destra. Le directory sono separate da `:`, ex. `PATH=$PATH:.` a PATH è stato riassegnato il valore di sé stessa più la directory corrente.  
+`TERM`  le informazioni sull'emulatore del terminale in utilizzo.  
+`USER`  il nome utente con cui si è collegati.  
+`PWD`   il path della directory corrente. Equivalente a `pwd`, ma questa è una variabile.  
+
+> VARIABILI E COMANDI SUI PROCESSI.  
+3 stati possibili di un processo: esecuzione, attesa, interrotto, zombie.  
+Un "job" è un insieme di comandi eseguiti insieme.  
+`$?`  contiene l'exit code dell'ultimo comando eseguito.  
+`$$`  contiene il process id (PID) della shell attiva.  
+`$PPID` "parent pid", contiene il pid del processo che ha attivato la shell.  
+`$!`  contiene il pid dell'ultimo comando eseguito.  
+`&`  indica di eseguire il job in background. Viene posto alla fine del comando.  
+`pidof`  trova il pid di un processo che esegue un determinato comando.  
+`fg`  riporta un processo in foreground ex. `fg %1` rimette in foreground il processo il cui [id] è 1.  
+`sleep`  "dorme" per un numero di secondi.  
+`jobs`   mostra una lista dei comandi in esecuzione in background.  
+`ps`    "process show", mostra i processi attivi nel sistema, `-f` (notazione estesa) mostra altre informazioni, `-e` mostra **tutti** i processi.  
+`top`    mostra una "top 10" dei processi che consumano le risorse del sistema.  
+
+> SEGNALI  
+In risposta a un segnale un processo può: ignorarlo, eseguire un'azione in default o "catturarlo".  
+`kill [sengale] pid` invia un segnale, di default invia `SIGTERM (15)`, ma si può specificare con il numero o con il nome. ex. `-15 -TERM -SIGTERM` si riferiscono allo stesso segnale.  
+
+|SIGname|SIGnum|description|keyboard shortcut|
+|:--:|:--:|:--:|:--:|
+|SIGHUP| 1 | hangup |ctrl-d|
+|SIGINT| 2 | interrupt da tastiera |ctrl-c|
+|SIGKILL| 9 | terminazione forzata ||
+|SIGPIPE| 13 |pipe interrotta a causa di un fallimento||
+|SIGTERM| 15 |come SIGKILL, ma può essere gestito dal processo||
+|SIGCHLD| 17 |processo figlio terminato||
+|SIGCONT| 18 |ripresa da sospensione||
+|SIGSTOP| 19 |sospensione temporanea| ctrl-z|
+
+> SCRIPTING  
+PREMESSA: utilizzare un editor di testo ( dal più "semplice" al più comple(ss|t)o )  
+nano -> vim -> EMACS. (quindi è preferibile usare emacs).  
+OK, dato che l'ho già scritto:  
+`nano`  
+NELLA PARTE BASSA c'è una reference immediata (anche per questo è il più semplice).  
+`ctrl-x` uscire, `ctrl-o` write out (SALVARE).  
+Quindi si apre `nano`, si scrive quello che si vuole, poi `ctrl-o` si inserisce un nome [ENTER], `ctrl-x`.
+\
+COMANDI:  
+`source` oppure `.`  legge il file come se fosse un programma, non serve scrivere lo SHEBANG all'inizio di un file del genere perché `source` assicura la sua interpretazione.  
+`test -x`  restituisce 1 (VERO) se l'argomento è eseguibile, 0 (FALSO) se non lo è.  
+`bc`    è una calcolatrice, può lavorare con il floating point values (float, numeri con la virgola) ex. `echo '3.0 + 2.1' | bc` restituisce `5.1`.  
+
+[FREE ENTRANCE: BASH STRIPPERS (no ok, è una guida concisa e breve di bash)](https://learnxinyminutes.com/docs/bash/)
+

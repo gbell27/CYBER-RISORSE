@@ -40,3 +40,8 @@ Una macchina può riferirsi a sé stessa sia con gli indirizzi di loopback sia c
 |C | `192.0.0.0` - `223.255.255.0`|
 | D | `224.0.0.0` - `239.255.255.255` |
 | E | `240.0.0.0` - `255.255.255.255` |
+
+> L'indirizzo **`255.255.255.255`** cos'è?
+Viene chiamato _limited broadcast address di Livello 3_.  
+**PER ESEMPIO**: nel protocollo DHCP, un PC all'accensione non ha un indirizzo IP e durante la fase _DHCP discover_ non sa a quale rete appartiene, perciò non può fare altro che mandare un "limited broadcast" chiedendo a tutti: "**chi mi dà un indirizzo IP**?".
+
