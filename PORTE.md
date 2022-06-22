@@ -9,6 +9,7 @@
 - 80 HTTP
 - 115 SFTP (secure ftp)
 - 443 HTTPS (secure https)
+- 445 SMB (utilizzata nell'attacco _EternalBlue_)
 - 137 138 139 NETBIOS
 - 3389 RDP
 - 3306 MySQL
